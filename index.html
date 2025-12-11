@@ -1,105 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuxeHome - Premium Furniture Store</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>WoodCraft | Premium Furniture Studio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="style.css">
+</head>
 <body>
+
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="fas fa-couch"></i> LuxeHome</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="#"><i class="fas fa-couch me-2"></i>WoodCraft</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#collections">Collections</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item">
-                        <span class="cart-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="cart-badge">3</span>
-                        </span>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#products">New Arrivals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="text-brown fs-5"><i class="fas fa-search"></i></a>
+                    <a href="#" class="text-brown fs-5"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="#contact" class="btn btn-furniture btn-sm ms-2">Get Quote</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section id="home" class="hero-section pt-5 mt-5">
+        <div class="hero-blob"></div>
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1>Transform Your Living Space</h1>
-                    <p>Discover premium furniture collections designed for comfort, style, and elegance. Every piece
-                        crafted with passion.</p>
-                    <div>
-                        <button class="btn-custom">Shop Now</button>
-                        <button class="btn-outline-custom">Learn More</button>
+                <div class="col-lg-6 mb-5 mb-lg-0 order-2 order-lg-1">
+                    <h5 class="text-brown text-uppercase letter-spacing-2 mt-4 mb-3">Best Furniture Collection</h5>
+                    <h1 class="display-3 fw-bold mb-4">Design Your Home <br>With Elegance</h1>
+                    <p class="lead text-secondary mb-5">Minimalist design meets maximum comfort. Transform your living space with our premium handcrafted wood furniture.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#products" class="btn btn-furniture">Shop Now</a>
+                        <a href="#about" class="btn btn-outline-furniture">View Gallery</a>
+                    </div>
+                    
+                    <div class="row mt-5 mb-3">
+                        <div class="col-4">
+                            <h3 class="fw-bold mb-0">500+</h3>
+                            <small class="text-muted">Unique Designs</small>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="fw-bold mb-0">15k+</h3>
+                            <small class="text-muted">Happy Clients</small>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6 hero-img">
-                    <div
-                        style="width: 100%; height: 350px; background: linear-gradient(135deg, #8b7d6b, #d4c4b9); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 100px;">
-                        <i class="fas fa-couch"></i>
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <!-- High quality furniture image -->
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1470&auto=format&fit=crop" alt="Luxury Sofa" class="hero-img img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-card">
+                        <i class="fas fa-truck feature-icon"></i>
+                        <h5>Free Shipping</h5>
+                        <p class="text-muted small mb-0">On all orders over $500</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-card">
+                        <i class="fas fa-sync-alt feature-icon"></i>
+                        <h5>Easy Returns</h5>
+                        <p class="text-muted small mb-0">30 Days money back</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-card">
+                        <i class="fas fa-fingerprint feature-icon"></i>
+                        <h5>Secure Payment</h5>
+                        <p class="text-muted small mb-0">100% Protected</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-card">
+                        <i class="fas fa-headset feature-icon"></i>
+                        <h5>24/7 Support</h5>
+                        <p class="text-muted small mb-0">Dedicated support team</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Collections -->
-    <section class="collections" id="collections">
+    <!-- Product Showcase -->
+    <section id="products" class="section-padding bg-light">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Collections</h2>
-                <div class="divider"></div>
-                <p>Explore our carefully curated furniture collections</p>
+            <div class="d-flex justify-content-between align-items-end mb-5">
+                <div>
+                    <h5 class="text-brown">Popular Products</h5>
+                    <h2>Trending Arrivals</h2>
+                </div>
+                <a href="#" class="btn btn-outline-furniture btn-sm d-none d-md-block">View All Products</a>
+            </div>
+
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=800&auto=format&fit=crop" alt="Chair">
+                            <div class="product-overlay">
+                                <button class="btn btn-furniture btn-sm rounded-circle mx-1"><i class="fas fa-cart-plus"></i></button>
+                                <button class="btn btn-light btn-sm rounded-circle mx-1"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <h5 class="mb-1">Velvet Armchair</h5>
+                            <p class="text-muted small">Living Room</p>
+                            <div class="price-text">$149.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1624870701178-fcb7b1226f91?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Table">
+                            <div class="product-overlay">
+                                <button class="btn btn-furniture btn-sm rounded-circle mx-1"><i class="fas fa-cart-plus"></i></button>
+                                <button class="btn btn-light btn-sm rounded-circle mx-1"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <h5 class="mb-1">Oak Coffee Table</h5>
+                            <p class="text-muted small">Tables</p>
+                            <div class="price-text">$89.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="https://plus.unsplash.com/premium_photo-1661310048986-a5ce0ede1f83?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lamp">
+                            <div class="product-overlay">
+                                <button class="btn btn-furniture btn-sm rounded-circle mx-1"><i class="fas fa-cart-plus"></i></button>
+                                <button class="btn btn-light btn-sm rounded-circle mx-1"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <h5 class="mb-1">Modern Floor Lamp</h5>
+                            <p class="text-muted small">Lighting</p>
+                            <div class="price-text">$45.00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=800&auto=format&fit=crop" alt="Sofa">
+                            <div class="product-overlay">
+                                <button class="btn btn-furniture btn-sm rounded-circle mx-1"><i class="fas fa-cart-plus"></i></button>
+                                <button class="btn btn-light btn-sm rounded-circle mx-1"><i class="far fa-heart"></i></button>
+                            </div>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <h5 class="mb-1">Scandi 3-Seater</h5>
+                            <p class="text-muted small">Living Room</p>
+                            <div class="price-text">$599.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer / Promo -->
+    <section class="section-padding promo-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="display-4 fw-bold mb-3">Winter Sale is Live!</h2>
+                    <p class="lead mb-4">Get up to <span class="text-warning fw-bold">50% OFF</span> on our entire wooden collection. Refresh your home for the new season.</p>
+                    <div class="row mb-4 justify-content-center text-dark">
+                        <div class="col-md-2 col-3"><div class="bg-white p-2 rounded"> <h3 class="mb-0">02</h3> <small>Days</small> </div></div>
+                        <div class="col-md-2 col-3"><div class="bg-white p-2 rounded"> <h3 class="mb-0">14</h3> <small>Hours</small> </div></div>
+                        <div class="col-md-2 col-3"><div class="bg-white p-2 rounded"> <h3 class="mb-0">20</h3> <small>Mins</small> </div></div>
+                    </div>
+                    <a href="#products" class="btn btn-light btn-lg text-brown fw-bold">Shop The Sale</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Collections -->
+    <section id="collections" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h5 class="text-brown">Inspiration</h5>
+                <h2>Our Gallery</h2>
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="collection-card">
-                        <div class="collection-card-img">
-                            <i class="fas fa-chair"></i>
-                        </div>
-                        <div class="collection-overlay">
-                            <h4>Living Room</h4>
-                            <p>Sofas, chairs & entertainment units</p>
-                            <a href="#">Explore →</a>
+                    <div class="gallery-item" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=800&auto=format&fit=crop" alt="Bedroom">
+                        <div class="gallery-caption">
+                            <h3>Cozy Bedrooms</h3>
+                            <a href="#" class="text-white text-decoration-underline">View More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="collection-card">
-                        <div class="collection-card-img">
-                            <i class="fas fa-bed"></i>
+                    <div class="gallery-item" style="height: 250px;">
+                        <img src="https://plus.unsplash.com/premium_photo-1676320514175-8a41932fcd46?q=80&w=575&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kitchen">
+                        <div class="gallery-caption">
+                            <h3>Modern Kitchens</h3>
                         </div>
-                        <div class="collection-overlay">
-                            <h4>Bedroom</h4>
-                            <p>Beds, wardrobes & nightstands</p>
-                            <a href="#">Explore →</a>
-                        </div>
+                    </div>
+                    <div class="gallery-item" style="height: 120px; background: var(--accent-blue);">
+                         <div class="d-flex align-items-center justify-content-center h-100">
+                             <h4 class="text-brown m-0">Custom Designs</h4>
+                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="collection-card">
-                        <div class="collection-card-img">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <div class="collection-overlay">
-                            <h4>Dining</h4>
-                            <p>Tables, chairs & storage cabinets</p>
-                            <a href="#">Explore →</a>
+                    <div class="gallery-item" style="height: 400px;">
+                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop" alt="Living Room">
+                        <div class="gallery-caption">
+                            <h3>Living Areas</h3>
+                            <a href="#" class="text-white text-decoration-underline">View More</a>
                         </div>
                     </div>
                 </div>
@@ -107,129 +257,46 @@
         </div>
     </section>
 
-    <!-- Products -->
-    <section class="products" id="products">
-        <div class="container">
-            <div class="section-title">
-                <h2>Featured Products</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <span class="product-badge">-20%</span>
-                            <i class="fas fa-chair"></i>
-                        </div>
-                        <div class="product-info">
-                            <h5>Modern Leather Sofa</h5>
-                            <p>Comfortable 3-seater with premium leather</p>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i> (124)
-                            </div>
-                            <div class="product-price">
-                                <span class="price">$599</span>
-                                <button class="add-to-cart">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <i class="fas fa-bed"></i>
-                        </div>
-                        <div class="product-info">
-                            <h5>Wooden Platform Bed</h5>
-                            <p>Queen size bed with natural finish</p>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i> (89)
-                            </div>
-                            <div class="product-price">
-                                <span class="price">$499</span>
-                                <button class="add-to-cart">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <span class="product-badge">New</span>
-                            <i class="fas fa-table"></i>
-                        </div>
-                        <div class="product-info">
-                            <h5>Glass Dining Table</h5>
-                            <p>Elegant design for 6 seater dining</p>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i> (56)
-                            </div>
-                            <div class="product-price">
-                                <span class="price">$399</span>
-                                <button class="add-to-cart">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section class="about" id="about">
+    <!-- Testimonials -->
+    <section class="section-padding bg-soft-blue">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div
-                        style="width: 100%; height: 400px; background: linear-gradient(135deg, #d4c4b9, #8b7d6b); border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 100px;">
-                        <i class="fas fa-home"></i>
-                    </div>
+                <div class="col-md-5">
+                    <h5 class="text-brown">Testimonials</h5>
+                    <h2 class="mb-4">What Our Clients Say About Us</h2>
+                    <p class="text-muted">We pride ourselves on providing the best quality and service. Here is what some of our loyal customers have to say.</p>
+                    <a href="#" class="btn btn-furniture mt-3">Read All Reviews</a>
                 </div>
-                <div class="col-lg-6 about-content">
-                    <h2>Why Choose LuxeHome?</h2>
-                    <p>With over 15 years of experience, we've been crafting quality furniture that brings comfort and
-                        style to homes worldwide. Our mission is to deliver exceptional furniture pieces that enhance
-                        your lifestyle.</p>
-
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <h5>Premium Quality</h5>
-                                <p>Handpicked materials and expert craftsmanship</p>
+                <div class="col-md-7">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <div class="text-warning mb-2">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="small text-muted">"The sofa I bought is incredibly comfortable and the color is exactly as shown on the website. Delivery was super fast!"</p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle me-3" width="40" alt="User">
+                                    <div>
+                                        <h6 class="mb-0">Emily Wilson</h6>
+                                        <small class="text-muted">Interior Designer</small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="about-feature">
-                            <i class="fas fa-truck"></i>
-                            <div>
-                                <h5>Free Delivery</h5>
-                                <p>Fast & safe shipping to your doorstep</p>
-                            </div>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-headset"></i>
-                            <div>
-                                <h5>24/7 Support</h5>
-                                <p>Expert customer service always ready</p>
-                            </div>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-shield-alt"></i>
-                            <div>
-                                <h5>Warranty</h5>
-                                <p>5-year guarantee on all products</p>
+                        <div class="col-md-6">
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <div class="text-warning mb-2">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="small text-muted">"Excellent craftsmanship. The wood finish on the dining table is premium. Highly recommended for quality seekers."</p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="40" alt="User">
+                                    <div>
+                                        <h6 class="mb-0">James Carter</h6>
+                                        <small class="text-muted">Architect</small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -238,57 +305,96 @@
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta">
+    <!-- Contact Form Section -->
+    <section id="contact" class="section-padding">
         <div class="container">
-            <h2>Create Your Dream Home Today</h2>
-            <p>Join thousands of satisfied customers who've transformed their spaces</p>
-            <button class="add-to-cart">Start Shopping</button>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="contact-box shadow-lg">
+                        <div class="row">
+                            <div class="col-md-5 d-none d-md-block" style="background: url('https://images.unsplash.com/photo-1524419986249-348e8fa6ad4a?q=80&w=800&auto=format&fit=crop') center/cover;">
+                                <!-- Image Side -->
+                            </div>
+                            <div class="col-md-7 p-5 bg-white">
+                                <h2 class="mb-4">Get In Touch</h2>
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label text-muted small">Full Name</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label text-muted small">Email Address</label>
+                                            <input type="email" class="form-control">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label text-muted small">Subject</label>
+                                            <select class="form-select text-muted form-control">
+                                                <option>General Inquiry</option>
+                                                <option>Order Status</option>
+                                                <option>Custom Design</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label text-muted small">Message</label>
+                                            <textarea class="form-control" rows="4"></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-furniture w-100">Send Message</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <h5>LuxeHome</h5>
-                    <p>Premium furniture for modern living spaces.</p>
+        <div class="container pb-5">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="#" class="footer-logo mb-3 d-block"><i class="fas fa-couch me-2"></i>WoodCraft</a>
+                    <p class="small text-secondary">Crafting comfort for your home since 1990. We believe in sustainable wood sourcing and timeless designs.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <h5>Quick Links</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Collections</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+                <div class="col-md-2 col-6 footer-links">
+                    <h5 class="text-white mb-3">Shop</h5>
+                    <a href="#">Living Room</a>
+                    <a href="#">Bedroom</a>
+                    <a href="#">Kitchen</a>
+                    <a href="#">Office</a>
                 </div>
-                <div class="col-md-3">
-                    <h5>Customer Service</h5>
-                    <ul>
-                        <li><a href="#">Shipping Info</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Warranty</a></li>
-                    </ul>
+                <div class="col-md-2 col-6 footer-links">
+                    <h5 class="text-white mb-3">Company</h5>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
                 </div>
-                <div class="col-md-3">
-                    <h5>Connect With Us</h5>
-                    <div style="display: flex; gap: 15px; margin-top: 15px;">
-                        <a href="#" style="color: #8b7d6b; font-size: 20px;"><i class="fab fa-facebook"></i></a>
-                        <a href="#" style="color: #8b7d6b; font-size: 20px;"><i class="fab fa-instagram"></i></a>
-                        <a href="#" style="color: #8b7d6b; font-size: 20px;"><i class="fab fa-twitter"></i></a>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-3">Newsletter</h5>
+                    <p class="small text-secondary">Subscribe to get latest design ideas and 10% off your first order.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control border-0" placeholder="Your Email">
+                        <button class="btn btn-primary" style="background-color: var(--accent-blue); color: var(--dark-brown); border:none;" type="button">Join</button>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 LuxeHome. All rights reserved. | Privacy Policy | Terms & Conditions</p>
-            </div>
+        </div>
+        <div class="bg-black py-3 text-center">
+            <small class="text-secondary">&copy; 2023 WoodCraft Furniture. All Rights Reserved.</small>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
